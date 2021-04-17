@@ -45,10 +45,16 @@ a{
     font-size: 2rem;
     color:#EC4EF6ff;
 }
+
+a i{
+    color:#60D8CAff
+}
+
 a:hover{
     text-decoration: underline;
     color: #C9CBFFff;
 }
+
 .footer a{
     display: block;
 }
