@@ -1,0 +1,55 @@
+/* CSS HEX 
+--turquoise: #60D8CAff;
+--fuchsia: #EC4EF6ff;
+--trypan-blue: #2B0EA1ff;
+--lavender-blue: #C9CBFFff;
+--gray-web: #808080ff;
+*/
+
+body{
+    background-color: #0c0530;
+    width: 100%;
+    font-size: 3rem;
+    color:#EC4EF6ff;
+}
+
+.header{
+    margin:auto;
+    width:95vw;
+}
+
+.header, h1 
+.header a
+{
+    text-align: center;
+    font-family: sans-serif;
+
+}
+
+h3 a,
+h3 a:hover{
+    color:#EC4EF6ff;
+    font-size: 3rem;
+}
+
+#twitch-embed{
+    width: 90vw;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    width:275 px;
+    text-align: left;
+    margin: auto;
+    font-size: 2rem;
+    color:#EC4EF6ff;
+}
+a:hover{
+    text-decoration: underline;
+    color: #C9CBFFff;
+}
+.footer a{
+    display: block;
+}
+

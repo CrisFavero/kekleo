@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEKLeo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f3d0a823f2.js" crossorigin="anonymous"></script>
+</head>
+
+<body><div class="header">
+       
+        <img class="twitch" src="img/Javalogo.png" alt="">
+        <h1>Want to <img src="img/kekleo.png" alt="KEKLEO"> all day?</h1>
+        <h3>Watch <a href="https://www.twitch.tv/itsjavachip">itsJavaChip</a> on Twitch</h4>
+    </header>
+        <!-- Add a placeholder for the Twitch embed -->
+        <div id="twitch-embed"></div>
+
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+            new Twitch.Embed("twitch-embed", {
+                width: 1400,
+                height: 600,
+                channel: "itsjavachip",
+                // only needed if your site is also embedded on embed.example.com and othersite.example.com 
+                parent: ["kekleo.com", "www.kekleo.com"]
+            });
+            </script>
+</iframe>
+<div class="footer">
+    <div>
+    Join the <i class="far fa-lemon"></i>Lemon Grove on:</div>
+    </div>
+    <a href="https://www.twitch.tv/itsjavachip">
+        <i class="fab fa-twitch"></i>
+        Twitch
+    </a>
+    <a href="https://discord.gg/4c2dQdk">
+        <i class="fab fa-discord"></i>
+        Discord
+        </a>
+    <a href="https://www.instagram.com/itsjavachip/">
+        <i class="fab fa-instagram"></i>
+        Instagram
+    </a>
+    <a href="https://www.youtube.com/itsjavachip">
+        <i class="fab fa-youtube"></i>
+        Youtube
+    </a>
+    <a href="https://www.tiktok.com/@itsjavachip">
+        <i class="fab fa-tiktok"></i>
+        TikTok
+    </a>        
+</div>
+</body>
+</html>
