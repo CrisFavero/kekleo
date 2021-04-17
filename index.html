@@ -9,30 +9,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/f3d0a823f2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Press+Start+2P&family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 
-<body><div class="header">
-       
-        <img class="twitch" src="img/Javalogo.png" alt="">
+<body>
+    <div class="header">
+        <img class="javalogo" src="img/Javalogo.png" alt="">
         <h1>Want to <img src="img/kekleo.png" alt="KEKLEO"> all day?</h1>
         <h3>Watch <a href="https://www.twitch.tv/itsjavachip">itsJavaChip</a> on Twitch</h4>
-    </header>
-        <!-- Add a placeholder for the Twitch embed -->
-        <div id="twitch-embed"></div>
-
-        <!-- Load the Twitch embed script -->
-        <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-        <script type="text/javascript">
-            new Twitch.Embed("twitch-embed", {
-                width: 1400,
-                height: 600,
-                channel: "itsjavachip",
-                // only needed if your site is also embedded on embed.example.com and othersite.example.com 
-                parent: ["kekleo.com", "www.kekleo.com"]
-            });
-            </script>
+    </div>
+    <div class="twitch-embed">
+        <div class="twitch-video">
+          <iframe
+            src="https://player.twitch.tv/?channel=itsjavachip&parent=localhost&autoplay=false"
+            frameborder="0"
+            scrolling="no"
+            allowfullscreen="true"
+            height="100%"
+            width="100%">
+          </iframe>
+        </div>
+        <div class="twitch-chat">
+          <iframe
+            frameborder="0"
+            scrolling="no"
+            src="https://www.twitch.tv/embed/itsjavachip/chat?parent=localhost&darkpopout"
+            height="100%"
+            width="100%">
+          </iframe>
+        </div>
+      </div>       
 </iframe>
 <div class="footer">
     <div>
