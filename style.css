@@ -5,6 +5,10 @@
 --lavender-blue: #C9CBFFff;
 --gray-web: #808080ff;
 */
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body{
     background-color: #0c0530;
@@ -19,9 +23,11 @@ body{
   height: 12vmin;
 }
 
-.header{
-    margin:auto;
+.header,
+.footer{
+    margin:auto 0px;
     width:95vw;
+    padding: .25rem;
 }
 
 .header h1 img{
@@ -30,17 +36,15 @@ body{
 
 h3 a,
 h3 a:hover{
-    /* color:#EC4EF6ff; */
     font-size: 2.8vw;
     font-family: 'Press Start 2P', cursive;
-  }
+}
 
 .twitch-embed{
     width: 90vw;
     margin:auto;
     text-align: left;
 }
-
 
 .twitch-embed .twitch-video {
     padding-top: 56.25%;
@@ -88,7 +92,6 @@ a{
     width:275 px;
     text-align: left;
     margin: auto;
-    font-size: 2vw;
     color:#EC4EF6ff;
 }
 
@@ -99,9 +102,5 @@ a i{
 a:hover{
     text-decoration: underline;
     color: #C9CBFFff;
-}
-
-.footer a{
-    display: block;
 }
 
