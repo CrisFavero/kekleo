@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEKLeo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/f3d0a823f2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Press+Start+2P&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div id="timer">
+        <label class="mb-1 md:mb-0 md:w-1/3" for="discordtimer">Select the date and time</label>
+        <input type="datetime-local" id="discordtimer" class="border border-solid border-gray-100 rounded-lg shadow-lg">
+        <br><br>
+        <label for="stamp">Discord timestamp:</label>
+        <input label="stamp" id="stamp" name="stamp" class="text-center border border-solid border-gray-700" readonly>
+        <br>
+        <label for="relativestamp">Discord Relative timestamp:</label>
+        <input id="relativestamp" name="aaaa" class="text-center border border-solid border-gray-700" readonly>
+    </div>
+    <script>
+        const stamp = document.getElementById("stamp");
+        const relativestamp = document.getElementById("relativestamp");
+        var dateControl = document.getElementById("discordtimer");
+        const now = new Date().toISOString().split('.')[0];
+        dateControl.value = now;
+
+        function changeStamps() {
+            var str = "<t:" + dateControl.valueAsNumber / 1000
+            stamp.value = str + ">";
+            relativestamp.value = str + ":R>";
+            console.log(dateControl.value);
+        }
+        dateControl.onchange = changeStamps
+        changeStamps()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</body>
+
+</html>
