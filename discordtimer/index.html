@@ -28,19 +28,32 @@
         <input id="relativestamp" name="aaaa" class="text-center border border-solid border-gray-700" readonly>
     </div>
     <script>
+        //Get our three input fields 
         const stamp = document.getElementById("stamp");
         const relativestamp = document.getElementById("relativestamp");
         var dateControl = document.getElementById("discordtimer");
-        const now = new Date().toISOString().split('.')[0];
-        dateControl.value = now;
+        //create our current time date object 
+        var now = new Date();
+        //Get the Timezone offset(min) from the browser and convert to seconds(* 60)
+        TZoffset = now.getTimezoneOffset() *60;
+        //Set the time to the time  minus the offset before setting the clock input
+        now.setTime( now - TZoffset*1000)
+        //Strip the millseconds and "Z" at the end of the iso string and fill in the input field
+        dateControl.value = now.toISOString().split('.')[0];
 
         function changeStamps() {
-            var str = "<t:" + dateControl.valueAsNumber / 1000
+            //to get epoch time we first devide by 1000 to get seconds instead of milliseconds 
+            var epochTime = (dateControl.valueAsNumber / 1000  ) 
+            //we now adjust it by adding the timezone offset from the browser(in mins) * 60 seconds
+            epochTime += TZoffset;
+            //common part of the strinng for both 
+            var str = "<t:" +epochTime
+            //add corresponding closings for each timestamp
             stamp.value = str + ">";
             relativestamp.value = str + ":R>";
-            console.log(dateControl.value);
         }
         dateControl.onchange = changeStamps
+        //call it once at the start just to fill out the texts fields at the beginning
         changeStamps()
     </script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
